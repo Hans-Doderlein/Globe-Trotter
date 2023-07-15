@@ -55,11 +55,6 @@ main {
     justify-content: space-between;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-}
-
 .row {
     padding-top: 5%;
 
@@ -73,3 +68,21 @@ main {
     background-color: #e8aa9b !important;
 }
 
+/* media query */
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-mobile {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}

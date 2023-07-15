@@ -10,7 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <title></title>
   </head>
 
@@ -18,7 +21,7 @@
     <header>
       <nav>
         <div class="nav-wrapper">
-          <h2>Globe Trotter</h2>
+          <a href="#" class="brand-logo">Globe Trotter</a>
           <ul id="nav-mobile" class="right">
             <li><a href="sass.html">City</a></li>
             <li><a href="badges.html">Fun Facts</a></li>
@@ -32,46 +35,60 @@
       <table class="elementsContainer">
         <tr>
           <td>
-            <input type="text" placeholder="search" class="search">
+            <input
+              type="text"
+              placeholder="search"
+              class="search"
+              id="cityName"
+            />
           </td>
           <td id="icon">
             <a href="#"><i class="material-icons">search</i></a>
           </td>
         </tr>
       </table>
+      <div id="cityOptionsContainer">
+        <table id="cityOptions"></table>
+      </div>
     </div>
 
-
     <main class="flex-container row">
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/images/city1.jpg">
-              <span class="card-title">City Name</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="./assets/images/city1.jpg" />
+
+            <div class="card-title">
+              <span id="retrievedName"> City Name</span>
+              <br />
+              <span id="cityTime"></span>
             </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
+
+            <a class="btn-floating halfway-fab waves-effect waves-light red"
+              ><i class="material-icons">add</i></a
+            >
+          </div>
+          <div class="card-content">
+            <p>
+              I am a very simple card. I am good at containing small bits of
+              information. I am convenient because I require little markup to
+              use effectively.
+            </p>
           </div>
         </div>
       </div>
 
-        <div class="col s12 m4">
-          <div class="card-panel teal">
-            <h3 class="white-text">Weather</h3>
-            <p class="white-text">Temperature:</p>
-            <p class="white-text">Time:</p>
-            <p class="white-text">Latitude:</p>
-            <p class="white-text">Longitude:</p>
-          </div>
+      <div class="col s12 m4">
+        <div class="card-panel teal">
+          <h3 class="white-text retrievedCity">City Info</h3>
+          <div id="cityData"></div>
         </div>
       </div>
     </main>
 
     <footer></footer>
 
-    <script src="./assets/JavaScript/main.js"></script>
+    <script src="./assets/JavaScript/fetch/fetchData.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

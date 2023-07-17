@@ -6,6 +6,11 @@
   background-color: #1a385a;
 }
 
+.logo {
+    font-size: 40px;
+    margin-left:10px;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +76,7 @@ main {
   background-color: #e8aa9b !important;
 }
 
+
 #cityOptions > tr > td:hover {
   cursor: pointer;
   background-color: rgb(177, 177, 177);
@@ -111,5 +117,9 @@ main {
 
   .boxContainer {
     margin-top: 100px;
+  }
+
+  .logo {
+    margin-left: 0px;
   }
 }

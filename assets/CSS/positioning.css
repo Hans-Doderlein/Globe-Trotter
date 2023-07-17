@@ -52,6 +52,9 @@
   color: #1a385a;
   padding: 0px;
 }
+.btn {
+  margin: 10px;
+}
 
 main {
   display: flex;

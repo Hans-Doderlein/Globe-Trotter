@@ -77,7 +77,10 @@
 
     tableData.classList.add("apiCityOption");
 
-    tableData.addEventListener("click", () => getCityDataById(cityID));
+    tableData.addEventListener("click", () => {
+      getCityDataById(cityID);
+      storeCity(cityName);
+    });
 
     tableRow.appendChild(tableData);
 

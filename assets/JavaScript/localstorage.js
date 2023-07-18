@@ -15,55 +15,52 @@
 //   }
 // }
 
-function storeCity(cityName) {
+//updated code
+function storeCity(cityName, searchID) {
   //stores new searches in local storage array
   console.log(cityName);
   let cities = localStorage.getItem("cities")
     ? JSON.parse(localStorage.getItem("cities"))
-    : [];
+    : {};
 
-  if (!cities.includes(cityName)) {
-    cities.push(cityName);
+  if (!(cityName in cities)) {
+    cities[cityName] = searchID;
     localStorage.setItem("cities", JSON.stringify(cities));
-    renderRecentSearches(cities);
-  }
 
-  console.log(cities);
+    renderRecentSearches(cityName, searchID);
+  }
 }
 
 function loadPreviousCities() {
   //on startup, loads search buttons based on local storage
   let cities = localStorage.getItem("cities")
     ? JSON.parse(localStorage.getItem("cities"))
-    : [];
+    : {};
 
-  renderRecentSearches(cities);
+  Object.entries(cities).forEach((entry) => {
+    const [city, id] = entry;
+    console.log(cities);
+    renderRecentSearches(city, id);
+  });
 }
 
 loadPreviousCities();
 
 //lorna rendering function
-function renderRecentSearches(cities) {
+function renderRecentSearches(city, id) {
   var recentSearchesContainer = document.getElementById(
     "pastSearchesContainer"
   );
 
-  recentSearchesContainer.innerHTML = "";
+  // recentSearchesContainer.innerHTML = "";
 
-  cities.forEach((i) => {
-    var button = document.createElement("button");
-    button.className = "waves-effect waves-light btn";
-    button.textContent = i;
-    button.addEventListener("click", function () {
-      fetchDataForCity(i);
-    });
-
-    recentSearchesContainer.appendChild(button);
+  var button = document.createElement("button");
+  button.className = "waves-effect waves-light btn";
+  button.textContent = city;
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    getCityDataById(id);
   });
-}
 
-function fetchDataForCity(city) {
-  // Implement your logic to fetch data for the selected city
-  console.log("Fetching data for city:", city);
-  // ...
+  recentSearchesContainer.appendChild(button);
 }

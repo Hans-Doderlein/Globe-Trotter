@@ -1,21 +1,3 @@
-//original code
-
-// function handlesearch(event) {
-//   var cityName = event.target.innerText;
-//   searchHistory.push(cityName);
-//   localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
-//   updateRecentSearches();
-// }
-
-// function updateRecentSearches() {
-//   var searchHistory = localStorage.getItem("searchHistory");
-//   if (searchHistory) {
-//     recentSearches = JSON.parse(searchHistory).slice(-6);
-//     renderRecentSearches();
-//   }
-// }
-
-//updated code
 function storeCity(cityName, searchID) {
   //stores new searches in local storage array
   console.log(cityName);
@@ -46,7 +28,7 @@ function loadPreviousCities() {
 
 loadPreviousCities();
 
-//lorna rendering function
+//renders search buttons and button functionality
 function renderRecentSearches(city, id) {
   var recentSearchesContainer = document.getElementById(
     "pastSearchesContainer"

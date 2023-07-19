@@ -10,38 +10,60 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Globe Trotter</title>
   </head>
 
   <body>
     <header>
       <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Globe Trotter</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">City</a></li>
-            <li><a href="badges.html">Fun Facts</a></li>3
-            <li><a href="collapsible.html">Weather</a></li>
+          <a href="#" class="logo">Globe Trotter</a>
+          <ul id="nav-mobile" class="right">
+            <li>
+              <a href="https://www.google.com/travel/flights" target="_blank"
+                >Flights</a
+              >
+            </li>
+            <li><a href="https://www.hotels.com" target="_blank">Hotels</a></li>
+            <li><a href="https://www.airbnb.com" target="_blank">Airbnb</a></li>
           </ul>
         </div>
       </nav>
     </header>
     
     <div class="boxContainer">
+      <div class="row container center-align" id="pastSearchesContainer"></div>
       <table class="elementsContainer">
         <tr>
           <td>
-            <input type="text" placeholder="search" class="search">
+            <input
+              type="text"
+              placeholder="search"
+              class="search"
+              id="cityName"
+            />
           </td>
           <td id="icon">
             <a href="#"><i class="material-icons">search</i></a>
           </td>
         </tr>
       </table>
+      <div id="cityOptionsContainer">
+        <table id="cityOptions"></table>
+      </div>
     </div>
 
+    <main class="flex-container row main-box">
+      <div class="col s12 m4 main-box">
+        <div class="card large">
+          <div class="card-image">
+            <img src="./assets/images/city1.jpg" />
 
+<<<<<<< HEAD
     <main class="flex-container row">
         <div class="col s12 m4">
           <div class="card">
@@ -52,26 +74,40 @@
             </div>
             <div class="card-content">
               <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+=======
+            <div class="card-title">
+              <span id="retrievedName"> City Name</span>
+              <br />
+              <span id="cityTime"></span>
+>>>>>>> a14eaf912465f582995ae3d5c1270fc1ef2dec82
             </div>
+          </div>
+          <div class="card-content flex">
+            <p>
+              I am a very simple card. I am good at containing small bits of
+              information. I am convenient because I require little markup to
+              use effectively.
+            </p>
           </div>
         </div>
       </div>
 
-        <div class="col s12 m4">
-          <div class="card-panel teal">
-            <h3 class="white-text">Weather</h3>
-            <p class="white-text">Temperature:</p>
-            <p class="white-text">Time:</p>
-            <p class="white-text">Latitude:</p>
-            <p class="white-text">Longitude:</p>
-          </div>
+      <div class="col s12 m4 main-box">
+        <div class="card-panel teal">
+          <h3 class="white-text retrievedCity">City Info</h3>
+          <div id="cityData"></div>
         </div>
       </div>
     </main>
 
     <footer></footer>
+    <script src="./assets/JavaScript/fetchData.js"></script>
+    <script src="./assets/JavaScript/localstorage.js"></script>
 
+<<<<<<< HEAD
     <script src="./assets/JavaScript/photos.js"></script>
+=======
+>>>>>>> a14eaf912465f582995ae3d5c1270fc1ef2dec82
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

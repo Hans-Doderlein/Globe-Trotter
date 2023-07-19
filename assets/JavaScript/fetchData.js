@@ -78,6 +78,7 @@ function createSearchOption(cityName, cityID) {
   tableData.addEventListener("click", () => {
     getCityDataById(cityID);
     storeCity(cityName, cityID);
+    getGooglePhoto(cityName.split(",", 1));
   });
 
   tableRow.appendChild(tableData);

@@ -1,11 +1,11 @@
 function storeCity(cityName, searchID) {
   //stores new searches in local storage array
-  console.log(cityName);
+
   let cities = localStorage.getItem("cities")
     ? JSON.parse(localStorage.getItem("cities"))
     : {};
 
-    cityName=cityName.split(',',1)
+  cityName = cityName.split(",", 1);
 
   if (!(cityName in cities)) {
     cities[cityName] = searchID;
@@ -23,7 +23,7 @@ function loadPreviousCities() {
 
   Object.entries(cities).forEach((entry) => {
     const [city, id] = entry;
-    console.log(cities);
+
     renderRecentSearches(city, id);
   });
 }
@@ -44,6 +44,7 @@ function renderRecentSearches(city, id) {
   button.addEventListener("click", (e) => {
     e.preventDefault();
     getCityDataById(id);
+    getGooglePhoto(city);
   });
 
   recentSearchesContainer.appendChild(button);

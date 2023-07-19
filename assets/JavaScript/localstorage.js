@@ -5,6 +5,8 @@ function storeCity(cityName, searchID) {
     ? JSON.parse(localStorage.getItem("cities"))
     : {};
 
+    cityName=cityName.split(',',1)
+
   if (!(cityName in cities)) {
     cities[cityName] = searchID;
     localStorage.setItem("cities", JSON.stringify(cities));

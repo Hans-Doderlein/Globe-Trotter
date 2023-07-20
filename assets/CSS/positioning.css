@@ -52,26 +52,11 @@
 }
 
 .btn {
-  margin: 10px;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-between;
+  margin: 8px;
 }
 
 .row {
-  padding-top: 5%;
-}
-
-.card {
-  width: 100%;
+  padding-top: 25px;
 }
 
 .teal {
@@ -122,10 +107,15 @@ h3 {
   }
 
   .boxContainer {
-    margin-top: 100px;
+    margin-top: 55px;
   }
 
   .logo {
     margin-left: 0px;
+  }
+
+  .card {
+    min-width: 275px;
+    margin-right: 5px;
   }
 }

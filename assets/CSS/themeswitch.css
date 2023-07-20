@@ -24,14 +24,10 @@
 
 .dark-searchbar {
     border: 4px solid #26a69a;
-    background-color:#1a385a;
-    border-radius: 50px;
   }
 
 .light-searchbar {
     border: 4px solid #1a385a;
-    background-color:white;
-    border-radius: 50px;
   }
 
 .toggle-icons {
@@ -39,6 +35,3 @@
     color:white;
   }
 
-  .rounded-borders {
-    border-radius: 50px;
-  }

@@ -3,7 +3,7 @@ var themeSwitcher = document.querySelector("#themeSwitcher");
 var navBar = document.querySelector(".nav-wrapper");
 var mainBackground = document.querySelector("body");
 var userInput = document.querySelector(".search");
-var searchBar = document.querySelector("table");
+var searchBar = document.querySelector(".boxContainer");
 
 var mode = "light";
 

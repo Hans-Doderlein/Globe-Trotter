@@ -24,7 +24,6 @@
 
 .boxContainer {
   margin: auto;
-  margin-top: 5%;
   width: 50%;
   position: relative;
 }
@@ -84,10 +83,6 @@ main {
   background-color: #e8aa9b !important;
 }
 
-#retrievedName {
-  font-weight: 400;
-}
-
 #cityOptions > tr > td:hover {
   cursor: pointer;
   background-color: rgb(177, 177, 177);
@@ -111,11 +106,13 @@ main {
 
 .cityInfo {
   color: white;
+  text-align: center;
 }
 
-.retrievedCity {
+h3 {
   text-decoration: underline;
 }
+
 .main-box {
   margin: 0 auto;
 }

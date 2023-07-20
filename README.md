@@ -2,7 +2,7 @@
 
 ## Description
 
-* As a developer, I want to create a web application that will allow users to view the current time, weather and facts about various cities they plan to travel to in the US.
+- As a developer, I want to create a web application that will allow users to view the current time, weather and facts about various cities they plan to travel to in the US.
 
 ## User Story
 

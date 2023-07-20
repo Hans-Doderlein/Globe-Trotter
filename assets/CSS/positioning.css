@@ -7,8 +7,8 @@
 }
 
 .logo {
-    font-size: 40px;
-    margin-left:10px;
+  font-size: 40px;
+  margin-left: 10px;
 }
 
 .switch {
@@ -23,7 +23,6 @@
 
 .boxContainer {
   margin: auto;
-  margin-top: 5%;
   width: 50%;
   position: relative;
   border-radius: 50px;
@@ -33,6 +32,7 @@
   width: 100%;
   height: 100%;
   vertical-align: middle;
+  border: 4px solid #1a385a;
 }
 
 .search {
@@ -50,38 +50,23 @@
   outline: none;
 }
 
-.material-icones {
+.material-icons {
   font-size: 26;
   color: #1a385a;
   padding: 0px;
 }
+
 .btn {
-  margin: 10px;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-between;
+  margin: 8px;
 }
 
 .row {
-  padding-top: 5%;
-}
-
-.card {
-  width: 100%;
+  padding-top: 25px;
 }
 
 .teal {
   background-color: #e8aa9b !important;
 }
-
 
 #cityOptions > tr > td:hover {
   cursor: pointer;
@@ -106,10 +91,15 @@ main {
 
 .cityInfo {
   color: white;
+  text-align: center;
 }
 
-.retrievedCity {
+h3 {
   text-decoration: underline;
+}
+
+.main-box {
+  margin: 0 auto;
 }
 
 /* smaller screen */
@@ -122,10 +112,15 @@ main {
   }
 
   .boxContainer {
-    margin-top: 100px;
+    margin-top: 55px;
   }
 
   .logo {
     margin-left: 0px;
+  }
+
+  .card {
+    min-width: 275px;
+    margin-right: 5px;
   }
 }

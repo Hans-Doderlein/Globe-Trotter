@@ -45,6 +45,7 @@ function renderRecentSearches(city, id) {
     e.preventDefault();
     getCityDataById(id);
     getGooglePhoto(city);
+    getWeather(city);
   });
 
   recentSearchesContainer.appendChild(button);

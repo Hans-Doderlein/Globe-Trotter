@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-  />
-  <link rel="stylesheet" href="./assets/CSS/positioning.css" />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/CSS/positioning.css" />
     <link rel="stylesheet" href="./assets/CSS/themeswitch.css" />
-    
-    
 
     <link
       rel="stylesheet"
@@ -25,12 +23,16 @@
     <header>
       <nav>
         <div class="nav-wrapper">
-          <a href="#" class="logo">Globe Trotter</a>
-               <div class = "switch">
-                <label class="toggle-icons">&#9728;
-                  <input type = "checkbox" id="themeSwitcher">
-                  <span class = "lever"></span>
-                    &#9789;</label>
+          <a href="#" class="logo"> Globe Trotter </a>
+
+          <div class="switch">
+            <label class="toggle-icons"
+              >&#9728;
+              <input type="checkbox" id="themeSwitcher" />
+              <span class="lever"></span>
+              &#9789;</label
+            >
+          </div>
           <ul id="nav-mobile" class="right">
             <li>
               <a href="https://www.google.com/travel/flights" target="_blank"
@@ -51,19 +53,16 @@
           <td>
             <input
               type="text"
-              placeholder="search"
+              placeholder="Type in the name of a location"
               class="search"
               id="cityName"
             />
           </td>
           <td id="icon">
-            <a href="#"><i class="material-icons searchIcon">search</i></a>
+            <i class="material-icons searchIcon">search</i>
           </td>
         </tr>
       </table>
-      <div id="cityOptionsContainer">
-        <table id="cityOptions"></table>
-      </div>
     </div>
 
     <main class="flex-container row">
@@ -72,9 +71,11 @@
           <div class="card-image">
             <img src="./assets/images/city1.jpg" id="city-image" />
           </div>
-          
+
           <div class="card-content teal flex">
-            <h3 class="white-text center" id="retrievedName">City Name</h3>
+            <h3 class="white-text center" id="retrievedName">
+              Search for a location
+            </h3>
             <br />
             <h4 class="white-text center" id="cityTime"></h4>
           </div>
@@ -83,23 +84,23 @@
 
       <div class="col s12 m4 main-box">
         <div class="card-panel teal">
-          <h3 class="white-text center retrievedCity">City Info</h3>
+          <h3 class="white-text center retrievedCity">Location Info</h3>
           <div id="cityData"></div>
         </div>
-        <div class="card-panel teal" >
+        <div class="card-panel teal">
           <h3 class="white-text center">Current Weather</h3>
           <div id="weatherInfo"></div>
         </div>
       </div>
     </main>
-
-    <footer></footer>
     <script src="./assets/JavaScript/fetchData.js"></script>
     <script src="./assets/JavaScript/localstorage.js"></script>
     <script src="./assets/JavaScript/themeswitcher.js"></script>
     <script src="./assets/JavaScript/photos.js"></script>
     <script src="./assets/JavaScript/fetchWeather.js"></script>
     <script src="./assets/JavaScript/displayWeather.js"></script>
+    <script src="./assets/JavaScript/displayInfo.js"></script>
+    <script src="./assets/JavaScript/searchbar.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>

@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var mainBackground = document.querySelector("body");
   var userInput = document.querySelector(".search");
   var searchBar = document.querySelector(".elementsContainer");
-
   var mode = "light";
 
+  //switches themes between light and dark
   themeSwitcher.addEventListener("click", function () {
     if (mode === "light") {
       mode = "dark";

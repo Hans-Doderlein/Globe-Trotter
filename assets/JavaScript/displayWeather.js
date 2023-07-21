@@ -1,14 +1,13 @@
+//populates weather info on screen
 function displayWeather(weatherObject) {
-  const {
-    weather: [{ main: dayWeather }],
-  } = weatherObject.list[0];
-
+  //destructures response object
   const {
     main: { temp, humidity },
     wind: { speed },
     weather: [{ icon }],
   } = weatherObject.list[0];
 
+  //creates array of weather information
   let weather = [
     { label: "", value: `https://openweathermap.org/img/wn/${icon}@2x.png` },
     { label: "Temp: ", value: `${temp} F` },
@@ -21,10 +20,13 @@ function displayWeather(weatherObject) {
   weatherDiv.innerHTML = "";
 
   weather.forEach((i) => {
+    //only runs for the icon information
     if (i.value.length > 10) {
       weatherDiv.appendChild(uploadIcon(i.value));
       return;
     }
+
+    //creates h5 with info and appends it to the page
     let weatherInfo = document.createElement("h5");
 
     weatherInfo.textContent = `${i.label}${i.value}`;
@@ -35,6 +37,7 @@ function displayWeather(weatherObject) {
   });
 }
 
+//handles creating the icon img
 function uploadIcon(imageSrc) {
   let iconLocation = document.createElement("img");
 

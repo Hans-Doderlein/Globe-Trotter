@@ -79,6 +79,7 @@ function createSearchOption(cityName, cityID) {
     getCityDataById(cityID);
     storeCity(cityName, cityID);
     getGooglePhoto(cityName.split(",", 1));
+    getWeather(cityName.split(",", 1));
   });
 
   tableRow.appendChild(tableData);
